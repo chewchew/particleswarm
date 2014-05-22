@@ -11,7 +11,7 @@ typedef struct Particle
 	int nArgs;
 	float* solution;
 	float* velocity;
-	float pbest;
+	float pBest;
 } Particle;
 
 Particle run(int nParticles, Particle particles[nParticles]);
