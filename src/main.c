@@ -11,6 +11,8 @@ float equation(float x, float y)
 	return x * x - y;
 }
 
+// === fitness(Particle p, float goal) ===
+// returns the fitness value of given particle based on goal
 float fitness(Particle p, float goal)
 {
 	float x = p.solution[0];
@@ -86,7 +88,7 @@ int main()
 		printf("%f\n",p.pBest);
 		printf("\n");
 	}
-	
+
 	// free space
 	for (int i = 0; i < number_of_particles; i++)
 	{
