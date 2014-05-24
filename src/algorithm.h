@@ -6,7 +6,7 @@
 	solution - contains values for equation-solution
 	velocity - rate of change for each solution-value 
 	pBest    - best fitness achieved so far */
-typedef struct Particle
+typedef struct
 {
 	int nArgs;
 	float* solution;
@@ -14,6 +14,9 @@ typedef struct Particle
 	float pBest;
 } Particle;
 
-Particle run(int nParticles, Particle particles[nParticles]);
+/* ================ run ==================
+	p_particles - pointer to an array containing possible solutions
+	fitness	    - function for calculating fitness */
+Particle run(Particle* p_particles, float (*fitness)(Particle, float));
 
 #endif
